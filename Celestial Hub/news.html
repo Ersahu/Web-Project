@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solar System</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background: url('space.jpg');
+      }
+
+      /* Apply styles to the header */
+      header {
+        background-color: black;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        /* Add this line to make it a reference for the logo */
+      }
+
+      /* Style the header's heading */
+      header h1 {
+        margin: 0;
+      }
+
+      /* Style the logo container */
+      .logo {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 80%;
+        overflow: hidden;
+        /* Add this line to hide the overflow */
+      }
+
+      .animated-image {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .animated-image:hover {
+        transform: scale(1.1);
+      }
+
+      /* Style the logo image */
+      .logo-image {
+        width: 100%;
+        height: 100%;
+        background-image: url('abc (2).jpeg');
+        /* Replace with your new logo image URL */
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Style the navigation menu */
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      header nav li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      header nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* Styles for the header-icons section */
+      .header-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      /* Style the search bar */
+      .search-bar {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 90px;
+      }
+
+      .search-bar input {
+        border: none;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .search-bar button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        animation: glow 1s infinite;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 5px #333;
+        }
+        50% {
+          box-shadow: 0 0 20px orangered, 0 0 30px pink;
+        }
+        100% {
+          box-shadow: 0 0 5px #333;
+        }
+      }
+
+      .home a {
+        margin-right: 40px;
+        /* Adjust the value as needed */
+        text-decoration: none;
+        color: whitesmoke;
+        /* Default link color */
+        transition: color 0.3s ease;
+        /* Add a color transition on hover */
+      }
+
+      .home a:hover {
+        color: brown;
+        /* Change link color on hover */
+        animation: bounce 0.5s ease;
+        /* Add a bounce animation on hover */
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .footer {
+        background-color: rgb(7, 13, 49);
+        color: white;
+        text-align: left;
+        padding: 10px;
+        font-size: 18px;
+        width: 100%;
+      }
+
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+        padding: 100px;
+        margin-left: 90px;
+      }
+
+      .card {
+        width: 300px;
+        height: 300px;
+        background: #fff;
+        display: flex;
+        align-items: flex-end;
+        padding: 70px 70px;
+        position: relative;
+        transition: 0.5s all ease-in-out;
+        gap: 10px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+        z-index: 2;
+        opacity: 0;
+        transition: 0.5s all;
+      }
+
+      .card:hover::before {
+        opacity: 1;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 5px solid pink; 
+       box-sizing: border-box; 
+      }
+
+      .card .info {
+        position: relative;
+        color: #fff;
+        z-index: 3;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s all;
+      }
+
+      .card:hover .info {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card .info h1 {
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+
+      .card .info p {
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .card .info .btn {
+        background: #fff;
+        padding: 0.5rem 1rem;
+        color: #000;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+      }
+
+      .card .info .btn:hover {
+        background: #fc5185;
+        color: #fff;
+        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-image"></div>
+      </div>
+      <nav>
+        <div class="header-icons">
+          <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search">
+            <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+          </div>
+          <div class="home">
+            <a href="index.html">Home</a>
+            <a href="about us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="technology.html">Technology</a>
+            <a href="photos.html">Photos</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div>
+      <h2 style="color:yellow;font-size: 45px;"align="center">News</h2>
+      <p style="color: white; font-size: 25px; text-align: center;">
+        <b>
+          Space news includes successful satellite launches, advancements in space exploration technologies, and international collaborations for future missions. Companies like SpaceX and NASA have achieved milestones, contributing to the evolving space landscape. Ongoing efforts focus on lunar exploration, Mars missions, and satellite constellations, shaping the future of space exploration.</b>
+      </p>
+    </div>
+    <div class="wrapper">
+      <div class="card">
+        <img src="ne1.webp" alt="">
+        <div class="info">
+          <h1>India Lands Successfully On The Moon</h1>
+          <p>On August 23, 2023, the Indian Space Research Organisation (ISRO) successfully landed its Chandrayaan-3 spacecraft on the moon. This made India the fourth country to land on the moon, and the first to land in the south pole region.</p>
+        </div>
+      </div>
+       
+
+
+      <div class="card">
+        <img src="ne2.webp" alt="">
+        <div class="info">
+          <h1>NASA's First Asteroid Sample Lands On Earth</h1>
+          <p>NASA's OSIRIS-REx spacecraft successfully delivered samples of asteroid Bennu to Earth on September 24, 2023. The sample was collected in October 2020.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="ne3.jpg" alt="">
+        <div class="info">
+          <h1>China Space Station Crew Completes Spacewalk</h1>
+          <p>According to the China Manned Space Agency, the Shenzhou-17 crew completed their first spacewalk on December 21, 2023 at 9:35 PM (Beijing Time). 
+            The Shenzhou-16 crew completed their first spacewalk on July 20, 2023. The spacewalk lasted about eight hours. 
+            </p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="ne4.webp" alt="">
+        <div class="info">
+          <h1>Richard Branson's Virgin Galactic Completes First Nanned Mission To Space</h1>
+          <p>On June 29, 2023, Virgin Galactic, a space tourism company founded by Richard Branson, successfully completed its first commercial spaceflight with four passengers on board. </p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="ne5.avif" alt="">
+        <div class="info">
+          <h1>Hydrogen Detected In Lunar Samples</h1>
+          <p>In November 2023, researchers from the U.S. Naval Research Laboratory (NRL) announced that they had detected hydrogen in lunar samples. The hydrogen was found in samples of moon rocks brought back during the Apollo missions.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="ne6.avif" alt="">
+        <div class="info">
+          <h1>Curiosity Rover Finds New Evidence Of Ancient Mars Rivers</h1>
+          <p>According to a study published in October 2023, NASA's Curiosity rover has found evidence of ancient rivers on Mars. The rover's data analysis suggests that many of the craters on Mars may have once been habitable rivers.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="ne7.avif" alt="">
+        <div class="info">
+          <h1>Aditya-L1 is India's First Mission To Study The Sun</h1>
+          <p>Aditya-L1 is India's first mission to study the Sun. The satellite was launched on September 2, 2023, from the Satish Dhawan Space Center in Sriharikota, Andhra Pradesh.
+            The Aditya-L1 mission will study the Sun's outer atmosphere from a distance of about 1.5 million kilometers from Earth. 
+          </p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="ne8.jpg" alt="">
+        <div class="info">
+          <h1>Nasa's Webb Reveals New Features In Heart Of Milky Way</h1>
+          <p>NASA's James Webb Space Telescope has captured a detailed image of the Sagittarius C region, which is near the Milky Way's core. The image reveals a dense star-forming area with many protostars and infrared-dark clouds.</p>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <footer class="footer">
+      <p align="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+    </footer>
+    <script>
+             function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+
+    </script>
+  </body>
+</html>

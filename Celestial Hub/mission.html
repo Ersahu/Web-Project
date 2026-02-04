@@ -1,0 +1,454 @@
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+      body{
+        margin: 0;
+  background: url('space.jpg');
+      }
+            header {
+      background-color: black;
+      color: #fff;
+      padding: 35px;
+      text-align: center;
+      position: relative;
+      width: 1349px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden;
+    }
+
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc (2).jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+   /* Increase the font size */
+}
+
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+    .home a {
+      margin-right: 40px;
+    }
+
+    .login-icon a,
+    .cart-icon a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .login-icon a img,
+    .cart-icon a img {
+      width: 50px;
+      height: 50px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer {
+    background-color:rgb(7, 13, 49);
+    color:white;
+    text-align: left;
+    padding: 30px;
+    font-size: 18px;
+    width: 100%;
+}
+
+    .site-title {
+      text-align: left;
+      margin-left: 90px;
+      font-size: 28px;
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    #split-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #left-panel, #right-panel {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      text-align: center;
+    }
+
+    #left-panel img {
+      width: 60px;
+      height: 60px;
+    }
+
+    #left-panel h2 {
+      color: brown;
+      font-size: 25px;
+      margin: 10px 0;
+    }
+    .movie-card{
+    height: 300px;
+    width: 500px;
+}
+    </style>
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <div class="logo-image"></div>
+    </div>
+    <nav>
+      
+        <div class="header-icons">
+          <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search">
+            <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+        </div>
+            <div class="home">
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="technology.html">Technology</a>
+                <a href="photos.html">Photos</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div>
+  <h2 style="color:yellow;font-size: 45px;"align="center">Mission</h2>
+  <p style="color: white; font-size: 25px; text-align: center;">
+    <b>
+      Space mission refers to a specific undertaking or project with the primary goal of exploring, studying, or <br>utilizing outer space. These missions can be conducted by government space agencies, international collaborations, or private entities. Space missions encompass a wide range of objectives, including scientific research, technology development, Earth observation, human spaceflight, and interplanetary exploration
+    </b>
+  </p>
+</div>
+<br><br>
+<main>
+  <div id="split-container">
+      <article class="movie-card">
+         <img src="miss11.jpg" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color:purple; font-size: 30px; text-align: center;">Aditya-L1</a></h1>
+        
+            <div class="infos">
+            <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>
+              Aditya-L1 is a coronagraphy spacecraft for studying the solar atmosphere, designed and developed by the Indian Space Research Organisation and various other Indian research institutes.</b></p>
+            </div>
+          </div>
+        </article>
+    <div id="left-panel">
+    </div>
+      <article class="movie-card">
+          <img src="miss2.jpg" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: purple; font-size: 30px; text-align: center;">Gaganyaan</h1>
+        
+            <div class="infos">
+              <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>
+                Gaganyaan is an Indian crewed orbital spacecraft intended to be the formative spacecraft of the Indian Human Spaceflight Programme. The spacecraft is being designed to carry three people, and a planned upgraded version will be equipped with rendezvous and docking capabilities.</b></p>              
+            </div>
+          </div>
+        </article>
+    <div id="right-panel">
+      
+    </div>
+  </div>
+</main><br><br>
+<main>
+  <div id="split-container">
+      <article class="movie-card">
+          <img src="miss3.jpg" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: purple; font-size: 30px; text-align: center;">Artemis II</h1>
+        
+            <div class="infos">
+            <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>Artemis 2 is the second scheduled mission of NASA's Artemis program and the first scheduled crewed mission of NASA's Orion spacecraft, currently planned to be launched by the Space Launch System no earlier than November 2024.</b></p>
+            </div>
+          </div>
+        </article>
+    <div id="left-panel">
+    </div>
+      <article class="movie-card">
+          <img src="miss4.avif" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: purple; font-size: 30px; text-align: center;" >Mars 2020</h1>
+        
+            <div class="infos">
+              <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>Mars 2020 is a Mars rover mission that includes the rover Perseverance, the small robotic helicopter Ingenuity, and associated delivery systems, as part of NASA's Mars Exploration Program.</b></p>
+            </div>
+          </div>
+        </article>
+    <div id="right-panel">
+      
+    </div>
+  </div>
+</main>
+<br><br>
+<main>
+    <div id="split-container">
+        <article class="movie-card">
+           <img src="miss5.jpg" alt="Avatar wallpaper" />
+          
+            <div class="content">
+                <h1 style="color: purple; font-size: 30px; text-align: center;">Jupiter Icy Moons Explorer</a></h1>
+          
+              <div class="infos">
+              <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>
+                The Jupiter Icy Moons Explorer is an interplanetary spacecraft that was launched on 14 April 2023 from Guiana Space Centre in the French Guiana by the European Space Agency with Airbus Defence and Space as the main contractor.</b></p>
+              </div>
+            </div>
+          </article>
+      <div id="left-panel">
+      </div>
+        <article class="movie-card">
+            <img src="miss6.jpg" alt="Avatar wallpaper" />
+          
+            <div class="content">
+                <h1 style="color: purple; font-size: 30px; text-align: center;">BepiColombo</h1>
+          
+              <div class="infos">
+                <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>
+                  
+BepiColombo is a joint mission of the European Space Agency and the Japan Aerospace Exploration Agency to the planet Mercury. The mission comprises two satellites launched together: the Mercury Planetary Orbiter and Mio.</b></p>              
+              </div>
+            </div>
+          </article>
+      <div id="right-panel">
+        
+      </div>
+    </div>
+  </main><br><br>
+  <main>
+    <div id="split-container">
+        <article class="movie-card">
+            <img src="miss7.jpg" alt="Avatar wallpaper" />
+          
+            <div class="content">
+                <h1 style="color: purple; font-size: 30px; text-align: center;">H3 Test Flight 2</h1>
+          
+              <div class="infos">
+              <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>
+                The H3 Launch Vehicle is a Japanese expendable launch system. H3 launch vehicles are liquid-propellant rockets with strap-on solid rocket boosters and are launched from Tanegashima Space Center in Japan.</b></p>
+          
+              </div>
+            </div>
+          </article>
+      <div id="left-panel">
+      </div>
+        <article class="movie-card">
+            <img src="miss8.webp" alt="Avatar wallpaper" />
+          
+            <div class="content">
+                <h1 style="color: purple; font-size: 30px; text-align: center;" >Smart Lander for Investigating Moon</h1>
+          
+              <div class="infos">
+                <p class="synopsis" style="color: purple; font-size: 17px; text-align: center;"><b>
+                  Smart Lander for Investigating Moon is a lunar lander mission of the Japan Aerospace Exploration Agency. The lander will demonstrate precision landing technology.</b></p>
+              </div>
+            </div>
+          </article>
+      <div id="right-panel">
+        
+      </div>
+    </div>
+  </main>
+  <br><br>
+<footer class="footer">
+  <p align ="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+</footer>
+<script>
+               function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+</script>
+</body>
+</html>
