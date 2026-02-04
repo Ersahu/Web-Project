@@ -32,7 +32,9 @@ A comprehensive agricultural website dedicated to promoting sustainable farming 
 - Contact system
 
 ## 📸 Preview
-<img width="1919" height="1104" alt="image" src="https://github.com/user-attachments/assets/1bffe9e3-5458-45f4-bcad-980e1f39329f" />
+<img width="1919" height="1118" alt="Screenshot 2026-02-04 072739" src="https://github.com/user-attachments/assets/7de4023e-8af5-48fe-9d4c-f1da39eacba9" />
+
+
 
 ## 🌌 Project 2: Celestial Hub
 
@@ -61,7 +63,8 @@ An immersive space exploration website that takes users on a journey through the
 - Technology section
 
 ## 📸 Preview
-<img width="1919" height="1104" alt="image" src="https://github.com/user-attachments/assets/1bffe9e3-5458-45f4-bcad-980e1f39329f" />
+<img width="1919" height="1124" alt="Screenshot 2026-02-04 072836" src="https://github.com/user-attachments/assets/d31dab30-9ca5-41c4-8731-a305b9396a0c" />
+
 
 ## 📁 Repository Structure
 
@@ -252,3 +255,4 @@ We welcome pull requests! For major changes, please open an issue to discuss wha
 
 ## 📜 License
 MIT License © 2025 Vaibhav
+
