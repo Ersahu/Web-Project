@@ -25,6 +25,10 @@ Bhartiya Krishi is a modern web platform designed to bridge the gap between trad
 - **Photos**: Visual gallery of farming practices
 - **Contact**: Contact forms and information
 
+## 📸 Preview
+<img width="1919" height="1118" alt="Screenshot 2026-02-04 072739" src="https://github.com/user-attachments/assets/0aa78ab8-21b7-4929-870e-df52fafb4932" />
+
+
 ## 📁 Project Structure
 
 ```
@@ -161,5 +165,6 @@ This project is proprietary and owned by Bhartiya Krishi organization.
 - Community supporters
 
 ---
+
 
 **© 2023 Bhartiya Krishi. All rights reserved.**
