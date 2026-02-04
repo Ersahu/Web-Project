@@ -31,6 +31,9 @@ A comprehensive agricultural website dedicated to promoting sustainable farming 
 - Photo gallery
 - Contact system
 
+## 📸 Preview
+<img width="1919" height="1104" alt="image" src="https://github.com/user-attachments/assets/1bffe9e3-5458-45f4-bcad-980e1f39329f" />
+
 ## 🌌 Project 2: Celestial Hub
 
 An immersive space exploration website that takes users on a journey through the cosmos, featuring comprehensive information about astronomy, space agencies, and celestial phenomena.
@@ -56,6 +59,9 @@ An immersive space exploration website that takes users on a journey through the
 - Space History and Records
 - Latest Space News
 - Technology section
+
+## 📸 Preview
+<img width="1919" height="1104" alt="image" src="https://github.com/user-attachments/assets/1bffe9e3-5458-45f4-bcad-980e1f39329f" />
 
 ## 📁 Repository Structure
 
@@ -234,6 +240,15 @@ Both projects can be deployed on:
 - Traditional web hosting
 - Local servers for development
 
----
+## 🤝 Contributions
+We welcome pull requests! For major changes, please open an issue to discuss what you'd like to improve or add.
 
-**© 2023 Web Project Collection. All rights reserved.**
+## 📧 Contact
+**Developer**: Vaibhav
+
+**Email**: sahuvaibhav064@gmail.com
+
+**LinkedIn**: https://www.linkedin.com/in/vaibhav-chaudhary-615712272/
+
+## 📜 License
+MIT License © 2025 Vaibhav
