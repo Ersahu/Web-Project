@@ -1,0 +1,395 @@
+<html>
+  <head>
+    <title>
+     solar system
+    </title>
+    <style>
+      body {
+  font-family: Arial;
+  margin: 0;
+  background: url('space.jpg');
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+  /* Apply styles to the header */
+    header {
+      background-color: black;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      position: relative; /* Add this line to make it a reference for the logo */
+    }
+
+    /* Style the header's heading */
+    header h1 {
+      margin: 0;
+    }
+
+    /* Style the logo container */
+    .logo {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden; /* Add this line to hide the overflow */
+    }
+    .animated-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+}
+
+    /* Style the logo image */
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc (2).jpeg'); /* Replace with your new logo image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Style the navigation menu */
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Styles for the header-icons section */
+    .header-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+
+    /* Style the search bar */
+    .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+    .home a {
+    margin-right: 40px; /* Adjust the value as needed */
+  text-decoration: none;
+  color: whitesmoke; /* Default link color */
+  transition: color 0.3s ease; /* Add a color transition on hover */
+}
+.home a:hover {
+  color: brown; /* Change link color on hover */
+  animation: bounce 0.5s ease; /* Add a bounce animation on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.section-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 800px; /* Adjust as needed */
+      margin: 20px auto; /* Adjust as needed */
+    }
+
+    /* Style for the left paragraph */
+    .left-paragraph {
+      flex: 20;
+      margin-right: 50px;
+    }
+
+    /* Style for the right circular image */
+    .right-image {
+      flex: 1;
+      text-align: center;
+      margin-left: 50px; 
+    }
+
+    /* Style for the circular image */
+    .circular-image {
+      width: 300px; /* Adjust the size as needed */
+      height: 300px; /* Adjust the size as needed */
+      border-radius: 50%;
+      object-fit: cover;
+  border: 5px solid blue;
+    }
+.footer {
+    background-color:rgb(7, 13, 49);
+    color:white;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <div class="logo-image"></div>
+      </div>
+      <nav>
+        
+          <div class="header-icons">
+            <div class="search-bar">
+              <input type="text" class="search-input" id="searchInput" placeholder="Search">
+              <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+          </div>
+              <div class="home">
+                  <a href="index.html">Home</a>
+                  <a href="about us.html">About Us</a>
+                  <a href="contact.html">Contact</a>
+                  <a href="technology.html">Technology</a>
+                  <a href="photos.html">Photos</a>
+              </div>
+          </div>
+      </nav>
+  </header><br><br>
+  <h2 style="color:yellow;font-size: 45px;"align="center">Solar System </h2>
+  <p  style="color: white; font-size: 25px;" align="center">Solar System is centered around the Sun, the shining ball in the sky. 
+  It includes the family of eight planets (excluding <br>Pluto which is a dwarf planet since 2006)
+   orbiting (traveling around) the Sun, as well as the moons of these planets, and smaller objects, 
+   such as comets, asteroids, and bits of space rock. The powerful pull of an invisible force called
+    gravity from the Sun stops these bodies from flying off into deepest space.</p>
+  <div class="section-container">
+    <div class="left-paragraph">
+      <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Sun </h2>
+      <p  style="color: white; font-size: 25px;">Sun, a blazing ball of hot, ionized gases, dominates our solar system, providing life-sustaining light and heat to Earth. Its powerful gravitational pull orchestrates the celestial dance of planets. A cosmic fusion reactor, the sun's core reaches temperatures of millions of degrees, fueling the radiant energy that shapes our solar environment.</p>
+    </div>
+    <div class="right-image">
+      <a href="https://en.wikipedia.org/wiki/Sun" ><img src="sun.gif" alt="Circular Image" class="circular-image"></a>
+    </div>
+  </div>
+    <div class="section-container">
+      <div class="left-paragraph">
+        <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Mercury</h2>
+        <p  style="color: white; font-size: 25px;">Mercury is the smallest and closest planet to the Sun in our solar system, with no atmosphere to retain heat. Its surface temperature ranges from extremely hot to frigid cold. Mercury's dayside can reach scorching temperatures, while its nightside experiences extreme cold. It completes an orbit around the Sun in just 88 Earth days.</p>
+      </div>
+      <div class="right-image">
+        <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" ><img src="Mercury.gif" alt="Circular Image" class="circular-image"></a>
+      </div>
+    </div>
+      <div class="section-container">
+        <div class="left-paragraph">
+          <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Venus </h2>
+          <p  style="color: white; font-size: 25px;">Venus, the second planet from the sun, is Earth's closest neighbor. Known for its scorching surface temperatures due to a thick atmosphere trapping heat, it is often called Earth's "sister planet." Venus rotates slowly, and its dense, cloudy atmosphere is composed mainly of carbon dioxide. It's a captivating celestial body in our solar system.</p>
+        </div>
+        <div class="right-image">
+          <a href="https://en.wikipedia.org/wiki/Venus" ><img src="Venus.gif" alt="Circular Image" class="circular-image"></a>
+        </div>
+      </div>
+        <div class="section-container">
+          <div class="left-paragraph">
+            <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Earth</h2>
+            <p  style="color: white; font-size: 25px;">Earth, the third planet from the sun in our solar system, sustains life with a diverse biosphere. Its atmosphere, primarily nitrogen and oxygen, supports a delicate balance, and vast oceans cover its surface. Home to a rich tapestry of ecosystems, Earth is the cradle of human civilization and a marvel in the cosmos.</p>
+          </div>
+          <div class="right-image">
+            <a href="https://en.wikipedia.org/wiki/Earth" ><img src="Earth.gif" alt="Circular Image" class="circular-image"></a>
+          </div>
+        </div>
+        <div class="section-container">
+          <div class="left-paragraph">
+            <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Moon</h2>
+            <p  style="color: white; font-size: 25px;">Moon, Earth's only natural satellite, captivates with its silvery glow in the night sky. It influences tides, its phases marking the passage of time. Scientists explore its mysteries, while poets find inspiration in its serene beauty. The moon, a celestial companion, holds cultural significance across diverse civilizations, sparking wonder and curiosity.</p>
+          </div>
+          <div class="right-image">
+            <a href="https://en.wikipedia.org/wiki/Moon" ><img src="Moon.webp" alt="Circular Image" class="circular-image"></a>
+          </div>
+        </div>
+          <div class="section-container">
+            <div class="left-paragraph">
+              <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Mars</h2>
+              <p  style="color: white; font-size: 25px;">Mars, the fourth planet from the Sun, is a cold, desert-like world with a thin atmosphere primarily composed of carbon dioxide. It features prominent surface features like the largest volcano, Olympus Mons, and the extensive Valles Marineris canyon system. Scientists explore its potential for past or present microbial life and future human colonization.</p>
+            </div>
+            <div class="right-image">
+              <a href="https://en.wikipedia.org/wiki/Mars" ><img src="mars.webp" alt="Circular Image" class="circular-image"></a>
+            </div>
+          </div>
+            <div class="section-container">
+              <div class="left-paragraph">
+                <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Jupiter</h2>
+                <p  style="color: white; font-size: 25px;">Jupiter, the largest planet in our solar system, is a gas giant with a massive atmosphere primarily composed of hydrogen and helium. It boasts a strong magnetic field and iconic Great Red Spot, a giant storm. Jupiter has numerous moons, including the four largest known as the Galilean moons: Io, Europa, Ganymede, and Callisto.</p>
+              </div>
+              <div class="right-image">
+                <a href="https://en.wikipedia.org/wiki/Jupiter" ><img src="jup.gif" alt="Circular Image" class="circular-image"></a>
+              </div>
+            </div>
+              <div class="section-container">
+                <div class="left-paragraph">
+                  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Saturn</h2>
+                  <p  style="color: white; font-size: 25px;">Saturn, the sixth planet from the Sun, is known for its stunning ring system composed of ice and rock particles. It is a gas giant, primarily consisting of hydrogen and helium. With a prominent set of rings and numerous moons, including Titan, Saturn is a captivating celestial body in our solar system.</p>
+                </div>
+                <div class="right-image">
+                  <a href="https://en.wikipedia.org/wiki/Saturn" ><img src="sat.gif" alt="Circular Image" class="circular-image"></a>
+                </div>
+              </div>
+                <div class="section-container">
+                  <div class="left-paragraph">
+                    <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Uranus</h2>
+                    <p  style="color: white; font-size: 25px;">Uranus, the seventh planet from the sun, is an ice giant in our solar system. It's unique for its extreme axial tilt, causing it to rotate on its side. Discovered in 1781 by William Herschel, Uranus has a bluish hue due to methane in its atmosphere. It remains a fascinating celestial body for scientific study.</p>
+                  </div>
+                  <div class="right-image">
+                    <a href="https://en.wikipedia.org/wiki/Uranus" ><img src="ura.webp" alt="Circular Image" class="circular-image"></a>
+                  </div>
+                </div>
+                  <div class="section-container">
+                    <div class="left-paragraph">
+                      <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Neptune</h2>
+                      <p  style="color: white; font-size: 25px;">Neptune, the eighth and farthest planet from the Sun in our solar system, is a gas giant with a vivid blue hue due to methane in its atmosphere. Discovered in 1846, it has a turbulent atmosphere featuring prominent storms, including the Great Dark Spot. Neptune has a unique retrograde orbit and multiple moons.</p>
+                    </div>
+                    <div class="right-image">
+                      <a href="https://en.wikipedia.org/wiki/Neptune" ><img src="nep.gif" alt="Circular Image" class="circular-image"></a>
+                    </div>
+                  </div>
+                    <div class="section-container">
+                      <div class="left-paragraph">
+                        <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Pluto</h2>
+                        <p  style="color: white; font-size: 25px;">Pluto, once considered the ninth planet in our solar system, was reclassified as a dwarf planet in 2006. It orbits the Sun in the distant Kuiper Belt, characterized by icy bodies. Discovered in 1930, Pluto has a complex atmosphere and five known moons. Its reclassification sparked debates about the definition of a planet.</p>
+                      </div>
+                      <div class="right-image">
+                        <a href="https://en.wikipedia.org/wiki/Pluto" ><img src="pluto.gif" alt="Circular Image" class="circular-image"></a>
+                      </div>
+                    </div>
+  <footer class="footer">
+    <p align="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+</footer>
+  <script>
+              function performSearch() {
+            // Get the value from the input field
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            // Check the search term and redirect accordingly
+            switch (searchTerm) {
+                case 'about':
+                    window.location.href = 'about.html';
+                    break;
+                case 'universe':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                    break;
+                case 'solar system':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Solar_System';
+                    break;
+                case 'sun':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                    break;
+                case 'kuiper belt':pluto
+                    window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                    break;
+                case 'mercury':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                    break;
+                case 'venus':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                    break;
+                case 'earth':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                    break;
+                case 'mars':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                    break;
+                case 'jupiter':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                    break;
+                case 'saturn':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                    break;
+                case 'uranus':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                    break;
+                case 'neptune':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                    break;
+                    case 'pluto':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                    break;
+                case 'dwarf planet':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                    break;
+                case 'asteroid':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                    break;
+                case 'comet':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                    break;
+                case 'meteoroid':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                    break;
+                case 'natural satellite':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                    break;
+                default:
+                    alert('No specific action for the search term: ' + searchTerm);
+            }
+        }
+  </script>
+  </body>
+</html>

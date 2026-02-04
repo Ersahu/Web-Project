@@ -1,0 +1,385 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>technology</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+      body{
+        margin: 0;
+  background: url('space.jpg');
+      }
+            header {
+      background-color: black;
+      color: #fff;
+      padding: 35px;
+      text-align: center;
+      position: relative;
+      width: 1349px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden;
+    }
+
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc (2).jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+   /* Increase the font size */
+}
+
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+    .home a {
+      margin-right: 40px;
+    }
+
+    .login-icon a,
+    .cart-icon a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .login-icon a img,
+    .cart-icon a img {
+      width: 50px;
+      height: 50px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer {
+    background-color:rgb(7, 13, 49);
+    color:white;
+    text-align: left;
+    padding: 30px;
+    font-size: 18px;
+    width: 100%;
+}
+
+    .site-title {
+      text-align: left;
+      margin-left: 90px;
+      font-size: 28px;
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    #split-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #left-panel, #right-panel {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      text-align: center;
+    }
+
+    #left-panel img {
+      width: 60px;
+      height: 60px;
+    }
+
+    #left-panel h2 {
+      color: brown;
+      font-size: 25px;
+      margin: 10px 0;
+    }
+    .movie-card{
+    height: 300px;
+    width: 500px;
+}
+    </style>
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <div class="logo-image"></div>
+    </div>
+    <nav>
+      
+        <div class="header-icons">
+          <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search">
+            <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+        </div>
+            <div class="home">
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="technology.html">Technology</a>
+                <a href="photos.html">Photos</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div>
+  <h2 style="color:yellow;font-size: 45px;"align="center">Technology</h2>
+  <p style="color: white; font-size: 25px; text-align: center;">
+    <b>
+      Welcome to Celestial Hub! Here, we share our expertise in space equipment. Our website covers a wide range <br>of topics, from common invention in space technology. Stay tuned for our regular updates and insights.
+    </b>
+  </p>
+</div>
+<br><br>
+<main>
+  <div id="split-container">
+      <article class="movie-card">
+         <img src="tech.webp" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: darkgreen; font-size: 30px; text-align: center;">Reusable Rocket Technology</a></h1>
+        
+            <div class="infos">
+            <p class="synopsis" style="color: darkgreen; font-size: 17px; text-align: center;"><b>
+              Reusable rockets, also known as reusable launch vehicles, are rockets that recover and reuse expensive rocket boosters and other parts. Reusable rockets can be up to 65% cheaper to refurbish and relaunch than building a new rocket</b></p>
+            </div>
+          </div>
+        </article>
+    <div id="left-panel">
+    </div>
+      <article class="movie-card">
+          <img src="tech1.jpg" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: darkgreen; font-size: 30px; text-align: center;">CubeSats and Small Satellites</h1>
+        
+            <div class="infos">
+              <p class="synopsis" style="color: darkgreen; font-size: 17px; text-align: center;"><b>
+                CubeSats are a subclass of small satellites, which are a type of spacecraft. CubeSats are miniature satellites that are about the size of a Rubik's cube and weigh about 1 kg. They are used for a variety of purposes, including remote sensing and communications.</b></p>              
+            </div>
+          </div>
+        </article>
+    <div id="right-panel">
+      
+    </div>
+  </div>
+</main><br><br>
+<main>
+  <div id="split-container">
+      <article class="movie-card">
+          <img src="tech2.webp" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: darkgreen; font-size: 30px; text-align: center;">Space Robots</h1>
+        
+            <div class="infos">
+            <p class="synopsis" style="color: darkgreen; font-size: 17px; text-align: center;"><b>Space robots are specialized robots that help and replace humans in space exploration, scientific experiments, and other activities. They can also support astronauts by repairing machinery and providing AI-powered assistance.</b></p>
+        
+            </div>
+          </div>
+        </article>
+    <div id="left-panel">
+    </div>
+      <article class="movie-card">
+          <img src="tech3.webp" alt="Avatar wallpaper" />
+        
+          <div class="content">
+              <h1 style="color: darkgreen; font-size: 30px; text-align: center;" >Space Tourism</h1>
+        
+            <div class="infos">
+              <p class="synopsis" style="color: darkgreen; font-size: 17px; text-align: center;"><b>Space tourism is a commercial activity that involves traveling into space for recreational purposes. It can also include watching a rocket launch, stargazing, or traveling to a space-centric destination.</b></p>
+            </div>
+          </div>
+        </article>
+    <div id="right-panel">
+      
+    </div>
+  </div>
+</main><br><br>
+<footer class="footer">
+  <p align ="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+</footer>
+<script>
+              function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+</script>
+</body>
+</html>

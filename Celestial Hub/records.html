@@ -1,0 +1,780 @@
+<html>
+  <head>
+    <title>
+    records
+    </title>
+    <style>
+      body {
+  font-family: Arial;
+  margin: 0;
+  background: url('space.jpg');
+  
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+  /* Apply styles to the header */
+    header {
+      background-color: black;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      position: relative; /* Add this line to make it a reference for the logo */
+    }
+
+    /* Style the header's heading */
+    header h1 {
+      margin: 0;
+    }
+
+    /* Style the logo container */
+    .logo {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden; /* Add this line to hide the overflow */
+    }
+    .animated-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+}
+
+    /* Style the logo image */
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc (2).jpeg'); /* Replace with your new logo image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Style the navigation menu */
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Styles for the header-icons section */
+    .header-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+
+    /* Style the search bar */
+    .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+    .home a {
+    margin-right: 40px; /* Adjust the value as needed */
+  text-decoration: none;
+  color: whitesmoke; /* Default link color */
+  transition: color 0.3s ease; /* Add a color transition on hover */
+}
+.home a:hover {
+  color: brown; /* Change link color on hover */
+  animation: bounce 0.5s ease; /* Add a bounce animation on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.footer {
+    background-color:rgb(7, 13, 49);
+    color:white;
+    text-align: left;
+    padding: 30px;
+    font-size: 18px;
+    width: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+figure.card {
+  position: relative;
+  width: 380px;
+  height: 240px;
+  background-image: var(--image-src);
+  background-position: 50% 50%;
+  background-size: 125%;
+  transition: background 400ms ease;
+  box-shadow: 0 6.7px 5.3px rgba(0, 0, 0, 0.03), 0 22.3px 17.9px rgba(0, 0, 0, 0.05), 0 200px 80px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+figure.card:hover figcaption {
+  transform: translateY(0px);
+}
+figure.card--1 {
+  background-size: 115%;
+  margin-left: 250px;
+  border: 5px solid pink;
+}
+figure.card--1:hover {
+  background-position: 50% 100%;
+}
+figure.card--1 figcaption {
+  bottom: 0;
+  transform: translateY(80px);
+}
+figure.card--2 {
+  background-size: 110%;
+  border: 5px solid pink;
+}
+figure.card--2:hover {
+  background-position: 50% -100%;
+}
+figure.card--2 figcaption {
+  top: 0;
+  transform: translateY(-80px);
+}
+figure.card--3 {
+  background-size: 115%;
+  margin-left: 250px;
+  border: 5px solid pink;
+}
+figure.card--3:hover {
+  background-position: -100% 50%;
+}
+figure.card--3 figcaption {
+  left: 0;
+  transform: translateX(-180px);
+}
+figure.card--4 {
+  background-size: 115%;
+  border: 5px solid pink;
+}
+figure.card--4:hover {
+  background-position: 100% 50%;
+}
+figure.card--4 figcaption {
+  right: 0;
+  transform: translateX(180px);
+}
+figure.card--1 figcaption, figure.card--2 figcaption {
+  width: 100%;
+  height: 80px;
+  padding: 15px 20px;
+}
+figure.card--3 figcaption, figure.card--4 figcaption {
+  flex-direction: column;
+  width: 180px;
+  height: 100%;
+  padding: 20px 15px;
+}
+figure.card figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  background: #282828;
+  transition: transform 400ms ease;
+}
+figure.card figcaption .info {
+  color: #e2e2e2;
+  font-family: "Montserrat";
+}
+figure.card figcaption .info h3 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+figure.card figcaption .info span {
+  color: #72cc60;
+  font-size: 0.85rem;
+}
+figure.card figcaption .links {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+figure.card figcaption .links a {
+  text-decoration: none;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  opacity: 0.65;
+  border-radius: 50%;
+  overflow: hidden;
+}
+figure.card figcaption .links a:hover {
+  opacity: 1;
+}
+figure.card figcaption .links a:focus {
+  outline: none;
+}
+figure.card figcaption .links a:focus::after {
+  transform: scale(1);
+  opacity: 1;
+}
+figure.card figcaption .links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(0.5);
+  z-index: -1;
+  transition: all 150ms ease;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    align-items: start;
+  }
+
+  .container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding: 80px 0;
+  }
+}
+.support {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
+}
+.support a {
+  margin: 0 10px;
+  color: #222;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 150ms ease;
+}
+.support a:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <div class="logo-image"></div>
+    </div>
+    <nav>
+        <div class="header-icons">
+          <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search">
+            <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+        </div>
+            <div class="home">
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="technology.html">Technology</a>
+                <a href="photos.html">Photos</a>
+            </div>
+        </div>
+    </nav>
+</header><br><br><br><br>
+<h2 style="color:yellow;font-size: 45px;"align="center">Records</h2><br>
+  <p  style="color: white; font-size: 25px;" align="center">
+    <b>Space records refer to comprehensive data sets documenting celestial objects, events, and phenomena in the cosmos. These records include observations, measurements, and other relevant information gathered through space exploration missions, telescopes, and scientific instruments to advance our understanding of the universe.</b></p>
+  <br><br><br>
+  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="center"> NASA </h2><br>
+  <div class="container">
+
+    <figure class="card card--1" style="--image-src: url('n1.png')">
+      <figcaption>
+        <span class="info">
+          <span>Voyager 1, launched in 1977, holds the record for the farthest human-made object from Earth, venturing into interstellar space.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/78A265wPiO4" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--2" style="--image-src: url('n2.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>The Saturn V, used in the Apollo missions, remains one of the most powerful rockets ever built and launched by NASA.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/TFyi0QOx08c" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--3" style="--image-src: url('n3.jpg')">
+      <figcaption>
+        <span class="info">
+          <span> NASA's Apollo 11 mission, with astronauts Neil Armstrong and Buzz Aldrin, achieved the historic first manned moon landing on July 20, 1969.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/PP8Escz15d8" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--4" style="--image-src: url('n4.webp')">
+      <figcaption>
+        <span class="info">
+          <span>This mission provided the first close-up images and data of Pluto, offering insights into the distant dwarf planet and its moons.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/DLwUVlzrP0Q" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+  </div>
+  
+
+
+  <br><br><br>
+  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="center"> ISRO </h2><br>
+  <div class="container">
+
+    <figure class="card card--1" style="--image-src: url('i1.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>ISRO's successful mission to Mars, making India the first Asian nation to reach Martian orbit and the first nation globally to do so on its maiden attempt.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/78A265wPiO4" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--2" style="--image-src: url('i2.png')">
+      <figcaption>
+        <span class="info">
+          <span>India's first lunar probe, which made significant discoveries, including the confirmation of water molecules on the Moon.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/TFyi0QOx08c" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--3" style="--image-src: url('i3.webp')">
+      <figcaption>
+        <span class="info">
+          <span> In 2023, ISRO became the first country to successfully land a spacecraft near the lunar south pole.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/PP8Escz15d8" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--4" style="--image-src: url('i4.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>The Polar Satellite Launch Vehicle set a world record by deploying 104 satellites in a single mission in 2017.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/DLwUVlzrP0Q" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+  </div>
+
+
+  <br><br><br>
+  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="center"> Roscosmos </h2><br>
+  <div class="container">
+
+    <figure class="card card--1" style="--image-src: url('r1.jpg')">
+      <figcaption>
+        <span class="info">
+          <span> Sputnik 1, launched in 1957, marked the beginning of the space age.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/78A265wPiO4" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--2" style="--image-src: url('r2.webp')">
+      <figcaption>
+        <span class="info">
+          <span> In April 1961, Yuri Gagarin from the Soviet Union became the first human in space.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/TFyi0QOx08c" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--3" style="--image-src: url('r3.png')">
+      <figcaption>
+        <span class="info">
+          <span>Roscosmos is the only group to successfully land a spacecraft on Venus.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/PP8Escz15d8" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--4" style="--image-src: url('r4.jpg')">
+      <figcaption>
+        <span class="info">
+          <span> Russia was the first country to bring moon soil to Earth.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/DLwUVlzrP0Q" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+  </div>
+
+
+
+
+  <br><br><br>
+  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="center"> CNSA</h2><br>
+  <div class="container">
+
+    <figure class="card card--1" style="--image-src: url('c1.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>CNSA was the first space agency to land on the far side of the moon</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/78A265wPiO4" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--2" style="--image-src: url('c2.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>The Chang'e-5 mission successfully collected lunar samples and returned them to Earth, marking a significant milestone in lunar exploration.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/TFyi0QOx08c" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--3" style="--image-src: url('c3.avif')">
+      <figcaption>
+        <span class="info">
+          <span>CNSA launched China's first astronaut (Yang Liwei) into orbit in 2003, making China the third country to achieve human spaceflight.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/PP8Escz15d8" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--4" style="--image-src: url('c4.jpeg')">
+      <figcaption>
+        <span class="info">
+          <span>The first Chinese space station module, Tiangong-1, was launched, serving as an experimental space laboratory.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/DLwUVlzrP0Q" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+  </div>
+
+
+
+
+  <br><br><br>
+  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="center"> JAXA </h2><br>
+  <div class="container">
+
+    <figure class="card card--1" style="--image-src: url('j1.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>JAXA's Hayabusa mission in 2010 successfully returned samples from the asteroid Itokawa.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/78A265wPiO4" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--2" style="--image-src: url('j2.cms')">
+      <figcaption>
+        <span class="info">
+          <span>JAXA has also conducted solar flare imaging by hard X-rays, solar particle measurement, and an engineering test satellite.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/TFyi0QOx08c" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--3" style="--image-src: url('j3.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>JAXA's SS-520-5 rocket, launched in 2018, set a record for being the smallest rocket to place a satellite into orbit.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/PP8Escz15d8" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+    <figure class="card card--4" style="--image-src: url('j4.jpg')">
+      <figcaption>
+        <span class="info">
+          <span>SPRINT-A is an ultraviolet telescope satellite designed to observe planets and other celestial objects in the ultraviolet spectrum.</span>
+        </span>
+        <span class="links">
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://unsplash.com/photos/DLwUVlzrP0Q" target="_blank"><i class="fas fa-share"></i></a>
+        </span>
+      </figcaption>
+    </figure>
+  
+  </div>
+  <!-- partial -->
+  <br><br><br>
+  <footer class="footer">
+  <p align ="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+</footer>
+<script>
+              function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+</script>
+</body>
+</html>
