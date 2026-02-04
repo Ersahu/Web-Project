@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solar System</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background: url('space.jpg');
+      }
+
+      /* Apply styles to the header */
+      header {
+        background-color: black;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        /* Add this line to make it a reference for the logo */
+      }
+
+      /* Style the header's heading */
+      header h1 {
+        margin: 0;
+      }
+
+      /* Style the logo container */
+      .logo {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 80%;
+        overflow: hidden;
+        /* Add this line to hide the overflow */
+      }
+
+      .animated-image {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .animated-image:hover {
+        transform: scale(1.1);
+      }
+
+      /* Style the logo image */
+      .logo-image {
+        width: 100%;
+        height: 100%;
+        background-image: url('abc (2).jpeg');
+        /* Replace with your new logo image URL */
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Style the navigation menu */
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      header nav li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      header nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* Styles for the header-icons section */
+      .header-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      /* Style the search bar */
+      .search-bar {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 90px;
+      }
+
+      .search-bar input {
+        border: none;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .search-bar button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        animation: glow 1s infinite;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 5px #333;
+        }
+        50% {
+          box-shadow: 0 0 20px orangered, 0 0 30px pink;
+        }
+        100% {
+          box-shadow: 0 0 5px #333;
+        }
+      }
+
+      .home a {
+        margin-right: 40px;
+        /* Adjust the value as needed */
+        text-decoration: none;
+        color: whitesmoke;
+        /* Default link color */
+        transition: color 0.3s ease;
+        /* Add a color transition on hover */
+      }
+
+      .home a:hover {
+        color: brown;
+        /* Change link color on hover */
+        animation: bounce 0.5s ease;
+        /* Add a bounce animation on hover */
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .footer {
+        background-color: rgb(7, 13, 49);
+        color: white;
+        text-align: left;
+        padding: 10px;
+        font-size: 18px;
+        width: 100%;
+      }
+
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+        padding: 100px;
+        margin-left: 90px;
+      }
+
+      .card {
+        width: 300px;
+        height: 300px;
+        background: #fff;
+        display: flex;
+        align-items: flex-end;
+        padding: 70px 70px;
+        position: relative;
+        transition: 0.5s all ease-in-out;
+        gap: 10px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+        z-index: 2;
+        opacity: 0;
+        transition: 0.5s all;
+      }
+
+      .card:hover::before {
+        opacity: 1;
+      }
+
+      .card img {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid pink; 
+  box-sizing: border-box; 
+      }
+
+      .card .info {
+        position: relative;
+        color: #fff;
+        z-index: 3;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s all;
+      }
+
+      .card:hover .info {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card .info h1 {
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+
+      .card .info p {
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .card .info .btn {
+        background: #fff;
+        padding: 0.5rem 1rem;
+        color: #000;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+      }
+
+      .card .info .btn:hover {
+        background: #fc5185;
+        color: #fff;
+        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-image"></div>
+      </div>
+      <nav>
+        <div class="header-icons">
+          <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search">
+            <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+          </div>
+          <div class="home">
+            <a href="index.html">Home</a>
+            <a href="about us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="technology.html">Technology</a>
+            <a href="photos.html">Photos</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div>
+      <h2 style="color:yellow;font-size: 45px;"align="center">Human In Space</h2>
+      <p style="color: white; font-size: 25px; text-align: center;">
+        <b>
+          Humans first ventured into space with Yuri Gagarin's historic orbit on April 12, 1961. Since then, space exploration has seen numerous milestones, including moon landings, spacewalks, and long-duration missions aboard space stations. These achievements reflect humanity's pursuit of knowledge and exploration beyond Earth's boundaries.
+        </b>
+      </p>
+    </div>
+    <div class="wrapper">
+      <div class="card">
+        <img src="hu1.jpg" alt="">
+        <div class="info">
+          <h1>Yuri Gagarin's Spaceflight</h1>
+          <p> Yuri Gagarin became the first human to travel into space. The Soviet pilot and cosmonaut
+             launched from what is now Kazakhstan in his Vostok 1 spacecraft.He orbited Earth once 
+             in 1 hour and 29 minutes, reaching a maximum altitude of 187 miles (301 km), and landed 
+             near the Russian city of Saratov.The entire flight lasted 108 minutes, with Vostok 1 circling
+              Earth at a speed of 27,400 kilometers per hour. 
+            </p>
+        </div>
+      </div>
+       
+
+
+      <div class="card">
+        <img src="hu2.jpg" alt="">
+        <div class="info">
+          <h1>First To Pilot A Spaceplane</h1>
+          <p>Joseph A. Walker piloted the North American X-15 to altitudes above the internationally
+             recognized boundary of space on July 19, 1963. The widely accepted boundary for space is the 
+             Kármán line, which is set at 100 kilometers (62 miles) above sea level.Robert M. White also flew the X-15 and achieved altitudes that were near or
+                above the Kármán line, contributing to the early development of spaceplane technology.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu3.jpg" alt="">
+        <div class="info">
+          <h1> First To Walk In Space</h1>
+          <p>Alexei Leonov was the first person to conduct a spacewalk on March 18, 1965. The Soviet 
+            cosmonaut floated outside his Voskhod 2 spacecraft for 12 minutes and 9 seconds, tethered
+             by a 16-foot cable.Leonov was part of the Soviet Union's competition with the US to reach
+              the moon. He crawled through an airlock, a pair of doors that keep air pressure inside the
+               ship, and floated out into space 310 miles (500km) above Earth.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu4.webp" alt="">
+        <div class="info">
+          <h1>First To Perform A Space Rendezvous</h1>
+          <p>Gemini 6A, piloted by Wally Schirra and Tom Stafford, achieved the first manned space
+             rendezvous with Gemini 7, which was already in orbit. The two spacecraft came within one 
+             foot (about 30 cm) of each other and maintained station-keeping for several hours. This 
+             achievement marked a significant milestone in space exploration and laid the groundwork 
+             for future rendezvous and docking maneuvers in space.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu5.webp" alt="">
+        <div class="info">
+          <h1>First To Rendezvous And Bock, Piloted</h1>
+          <p> Neil Armstrong and David Scott successfully docked the Gemini 8 spacecraft with the 
+            Agena target vehicle. This was the first time two spacecraft had docked together in 
+            Earth's orbit.The Gemini 8 mission was the sixth crewed spaceflight in NASA's Gemini program. 
+            The mission launched on March 16, 1966. 
+            The Gemini docking mechanisms use simple mechanical elements to allow two orbiting
+             vehicles to initially engage.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu6.jpg" alt="">
+        <div class="info">
+          <h1>First To Orbit The Moon</h1>
+          <p>Frank Borman, James Lovell, and William Anders launched on the Apollo 8 mission.
+             The mission was the first to send a crewed spacecraft beyond low Earth orbit and the 
+             first to orbit the moon. The astronauts spent 20 hours orbiting the moon, taking photos
+              of the far side of the moon and Earthrise. The mission also tested the spacecraft and 
+              crew's performance in lunar orbit and the navigation required for a journey to the moon. </p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="HU7.jpg" alt="">
+        <div class="info">
+          <h1> Fastest Speed Traveled By Human</h1>
+          <p>Apollo 10 was the fourth crewed mission in the Apollo program, and the second to orbit the moon. The mission took place from May 18-26, 1969.The Apollo 10 mission was a "dress rehearsal" for the first moon landing, which took place two months later. The mission tested all aspects of a crewed lunar landing, except for the landing itself.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu8.jpg" alt="">
+        <div class="info">
+          <h1>First To Land On Moon</h1>
+          <p>Apollo 11 was the first spaceflight to land humans on the moon. The mission launched on July 16, 1969, and landed on July 20, 1969. The crew consisted of Commander Neil Armstrong, Command Module Pilot Michael Collins, and Lunar Module Pilot Edwin “Buzz” Aldrin.
+            The Apollo 11 lunar module, also known as the "lem", carried the astronauts from lunar orbit to the moon's surface
+          </p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu9.jpg" alt="">
+        <div class="info">
+          <h1>First Space Station</h1>
+          <p>Salyut 1 was the world's first space station, launched into low Earth orbit by the Soviet Union on April 19, 1971. It was a predecessor to today's International Space Station (ISS)
+            Salyut 1 was a 18,430 kg space station manufactured by S. P. Korolev Rocket and Space Corporation Energia. It was launched from Baikonur Cosmodrome Site 81.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="hu10.png" alt="">
+        <div class="info">
+          <h1>First Space Shuttle Flight</h1>
+          <p> STS-1, launched on April 12, 1981, ending a long hiatus in American space flight. The mission carried astronauts John Young and Robert Crippen into orbit and orbited the Earth 37 times over 54.5 hours. 
+            The Space Shuttle fleet flew 135 missions from 1981 to 2011, helping to construct the International Space Station. The shuttles also docked with Russia's Mir space station nine times and flew to the International Space Station 36 times.
+            
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="card">
+        <img src="hu11.jpg" alt="">
+        <div class="info">
+          <h1>Mir Space Station </h1>
+          <p>
+            The Mir Space Station was a modular space station that operated in low Earth orbit from 1986 to 2001. It was the first modular space station and was assembled in orbit from 1986 to 1996. 
+            The Mir Space Station was the longest lasting and most elaborate space station to date. It was designed to house more cosmonauts on longer stays than the Soviet Union's Salyut space station. The Mir complex weighed 285,900 pounds and contained 12,400 cubic feet of habitable volume. 
+            
+          </p>
+        </div>
+      </div>
+
+     
+
+      <div class="card">
+        <img src="hu12.jpg" alt="">
+        <div class="info">
+          <h1>International Space Station </h1>
+          <p>The International Space Station (ISS) is a large, permanently crewed laboratory that orbits Earth. It's the largest modular space station in low Earth orbit.
+            The ISS is a collaboration between five space agencies: NASA, Roscosmos, JAXA, ESA, and CSA. It was designed between 1984 and 1993, and construction elements were built in the US, Canada, Japan, and Europe.  
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="hu13.jpg" alt="">
+        <div class="info">
+          <h1>First Space Tourist</h1>
+          <p>Dennis Tito is considered the first space tourist. In April 2001, the American engineer and entrepreneur traveled to the International Space Station (ISS) for eight days on a Russian Soyuz spacecraft. Tito paid a reported $20 million for the trip.
+            Tito's trip was a major milestone for space travel and tourism. Since then, more suborbital and orbital tourism opportunities have become available. 
+
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="hu14.jpg" alt="">
+        <div class="info">
+          <h1>First Spacewalk</h1>
+          <p>Soviet cosmonaut Alexei Leonov performed the first spacewalk on March 18, 1965. The spacewalk lasted 12 minutes and 9 seconds, and Leonov floated 310 miles (500 km) above Earth.
+            Leonov's spacewalk was part of the Voskhod 2 mission, and his fellow cosmonaut Pavel Belyayev remained inside the spacecraft to monitor his progress.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <footer class="footer">
+      <p align="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+    </footer>
+    <script>
+             function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+
+    </script>
+  </body>
+</html>
