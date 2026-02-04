@@ -1,0 +1,389 @@
+<html>
+  <head>
+    <title>
+     solar system
+    </title>
+    <style>
+      body {
+  font-family: Arial;
+  margin: 0;
+  background: url('space.jpg');
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+  /* Apply styles to the header */
+    header {
+      background-color: black;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      position: relative; /* Add this line to make it a reference for the logo */
+    }
+
+    /* Style the header's heading */
+    header h1 {
+      margin: 0;
+    }
+
+    /* Style the logo container */
+    .logo {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden; /* Add this line to hide the overflow */
+    }
+    .animated-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+}
+
+    /* Style the logo image */
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc (2).jpeg'); /* Replace with your new logo image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Style the navigation menu */
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Styles for the header-icons section */
+    .header-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+
+    /* Style the search bar */
+    .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+    .home a {
+    margin-right: 40px; /* Adjust the value as needed */
+  text-decoration: none;
+  color: whitesmoke; /* Default link color */
+  transition: color 0.3s ease; /* Add a color transition on hover */
+}
+.home a:hover {
+  color: brown; /* Change link color on hover */
+  animation: bounce 0.5s ease; /* Add a bounce animation on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.section-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px; /* Adjust as needed */
+      margin: 20px auto; /* Adjust as needed */
+    }
+
+    /* Style for the left paragraph */
+    .left-paragraph {
+      flex: 20;
+      margin-right: 50px;
+    }
+
+    /* Style for the right circular image */
+    .right-image {
+      flex: 1;
+      text-align: center;
+      margin-left: 100px; 
+    }
+
+    /* Style for the circular image */
+    .circular-image {
+      width: 300px; /* Adjust the size as needed */
+      height: 300px; /* Adjust the size as needed */
+      border-radius: 50%;
+      object-fit: cover;
+  border: 5px solid red;
+    }
+.footer {
+    background-color:rgb(7, 13, 49);
+    color:white;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <div class="logo-image"></div>
+      </div>
+      <nav>
+        
+          <div class="header-icons">
+            <div class="search-bar">
+              <input type="text" class="search-input" id="searchInput" placeholder="Search">
+              <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+          </div>
+              <div class="home">
+                  <a href="index.html">Home</a>
+                  <a href="about us.html">About Us</a>
+                  <a href="contact.html">Contact</a>
+                  <a href="technology.html">Technology</a>
+                  <a href="photos.html">Photos</a>
+              </div>
+          </div>
+      </nav>
+  </header><br><br>
+  <h2 style="color:yellow;font-size: 45px;"align="center">Space Agency</h2>
+  <p  style="color: white; font-size: 25px;" align="center">Space Agency are established 
+    with objectives that include national prestige, exploitation of remote sensing information, 
+    communications, education, and economic development. These agencies tend to be civil in nature 
+    (vs military) and serve to advance the benefits of exploitation and/or exploration of space.</p>
+  <div class="section-container">
+    <div class="left-paragraph">
+      <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">NASA</h2>
+      <p  style="color: white; font-size: 25px;">National Aeronautics and Space Administration is a government space agency of the United States. It is a big organization responsible for exploring space and studying the Earth. NASA has accomplished many amazing missions such as sending humans to the Moon, launching probes to study planets, etc. It is the space agency with the biggest budget in the world. Every year, it receives around $22,629 Million from the US government. </p>
+    </div>
+    <div class="right-image">
+      <a href="https://en.wikipedia.org/wiki/NASA" ><img src="nasa.webp" alt="Circular Image" class="circular-image" ></a>
+    </div>
+  </div>
+    <div class="section-container">
+      <div class="left-paragraph">
+        <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">ISRO</h2>
+        <p  style="color: white; font-size: 25px;">Indian Space Research Organisation is the space agency of the Government of India. It was founded in the year 1969 and has made significant achievements since then. It launched its very first satellite in 1975. One of the notable endeavours of ISRO was when it launched over 104 satellites using a single rocket. ISRO is one of the few agencies on the planet to launch missions to both Mars and the moon. It has also played a crucial role in the development of the satellite-based navigation system called NavIC. Currently, it is working on its mission to send humans to the moon.</p>
+      </div>
+      <div class="right-image">
+        <a href="https://en.wikipedia.org/wiki/ISRO" ><img src="isro.jpg" alt="Circular Image" class="circular-image"></a>
+      </div>
+    </div>
+      <div class="section-container">
+        <div class="left-paragraph">
+          <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">CNSA</h2>
+          <p  style="color: white; font-size: 25px;">China National Space Administration  has achieved a lot of things in the past few years. In the year 2019, China became the first country to land a spacecraft on the far side of the moon. After that, in 2020-21, CNSA worked on a Mars mission. This mission included a lander, rover, and orbiter. This made China the second country in history to land a rover on Mars after the US. Currently, the budget of CNSA is $11,000 Million.</p>
+        </div>
+        <div class="right-image">
+          <a href="https://en.wikipedia.org/wiki/China_National_Space_Administration" ><img src="cnsa.jpg" alt="Circular Image" class="circular-image"></a>
+        </div>
+      </div>
+        <div class="section-container">
+          <div class="left-paragraph">
+            <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Roscosmos</h2>
+            <p  style="color: white; font-size: 25px;"> Russian Federal Space Agency is famously known as Roscosmos. This space agency is the successor of the Soviet Space program. There was a time when it was competing rigorously with NASA, especially during the cold war. Yuri Gagarin who was the first human in space was a member of the Soviet Space Program. In recent years, Roscosmos is working on many International Space Station programs.</p>
+          </div>
+          <div class="right-image">
+            <a href="https://en.wikipedia.org/wiki/Roscosmos" ><img src="ros.png" alt="Circular Image" class="circular-image" ></a>
+          </div>
+        </div>
+        <div class="section-container">
+          <div class="left-paragraph">
+            <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">ESA</h2>
+            <p  style="color: white; font-size: 25px;">European Space Agency is a space agency of 22 member states. It was established in the year 1975. It has headquarters in Paris with a team of more than 2,200 engineers and scientists. As of 2023, it has an annual budget of more than 4.9 billion euros. This agency has sent multiple satellites, probes, and even astronauts into space to study the universe. ESA played an instrumental role in the development of Rosetta. It is one of the best spacecraft in the world.
+
+            </p>
+          </div>
+          <div class="right-image">
+            <a href="https://en.wikipedia.org/wiki/European_Space_Agency" ><img src="esa.jpg" alt="Circular Image" class="circular-image"></a>
+          </div>
+        </div>
+          <div class="section-container">
+            <div class="left-paragraph">
+              <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">JAXA</h2>
+              <p  style="color: white; font-size: 25px;">Japan Aerospace Exploration Agency is a space agency of Japan responsible for space exploration and developing new technologies. It has sent many spacecraft to different planets. JAXA has also worked with other countries to launch satellites. These satellites are responsible for observing Earth’s weather, climate, natural disaster, etc. Established in the year 2003, JAXA has an annual budget of more than $1,699 million.</p>
+            </div>
+            <div class="right-image">
+              <a href="https://en.wikipedia.org/wiki/JAXA" ><img src="jaxa.png" alt="Circular Image" class="circular-image"></a>
+            </div>
+          </div>
+            <div class="section-container">
+              <div class="left-paragraph">
+                <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">Space X</h2>
+                <p  style="color: white; font-size: 25px;">Space Exploration Technologies Corporation is a private space exploration company. It specializes in manufacturing rockets and other spacecraft to send into space. This company was founded by renowned entrepreneur Elon Musk. It has achieved multiple milestones including making the first privately-funded spacecraft to reach orbit. Plus, SpaceX has also created the first privately-funded spacecraft to dock with the International Space Station.</p>
+              </div>
+              <div class="right-image">
+                <a href="https://en.wikipedia.org/wiki/Space X" ><img src="spa.jpg" alt="Circular Image" class="circular-image"></a>
+              </div>
+            </div>
+              <div class="section-container">
+                <div class="left-paragraph">
+                  <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">CNES</h2>
+                  <p  style="color: white; font-size: 25px;">National Centre for Space Studies is a French space agency. Established in 1961, this agency has headquarters in Paris. It employs more than 2,500 people. CNES is responsible for developing and implementing the space policy of France. The agency has been launching satellites since 1979. CNES has been working closely with other space organizations around the world such as NASA, the European Space Agency, etc.
+
+                  </p>
+                </div>
+                <div class="right-image">
+                  <a href="https://en.wikipedia.org/wiki/CNES" ><img src="cnes.webp" alt="Circular Image" class="circular-image"></a>
+                </div>
+              </div>
+                <div class="section-container">
+                  <div class="left-paragraph">
+                    <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">DLR</h2>
+                    <p  style="color: white; font-size: 25px;">German Aerospace Center also known as Deutsches Zentrum für Luft- und Raumfahrt e.V.,is the national aerospace and space research agency in Germany. Founded in 1969, this agency has its headquarters in Cologne and multiple other locations throughout Germany. There are more than 8,127 employees currently working for German Aerospace Center. The current budget of DLR is more than 1.26 billion euros. The High-Resolution Stereo Camera (HRSC) was the biggest contribution of DLR to the European Space Agency’s Mars Mission.</p>
+                  </div>
+                  <div class="right-image">
+                    <a href="https://en.wikipedia.org/wiki/German_Aerospace_Center" ><img src="dlr.png" alt="Circular Image" class="circular-image"></a>
+                  </div>
+                </div>
+                  <div class="section-container">
+                    <div class="left-paragraph">
+                      <h2 style="color:rgb(127, 248, 28);font-size: 37px;"align="left">ASI</h2>
+                      <p  style="color: white; font-size: 25px;">Italian Space Agency also known as Agenzia Spaziale Italiana , was founded in 1988. It is the space agency responsible for promoting, coordinating and conducting space activities in Italy. ASI has been working in numerous space missions. It was responsible for the launch of the first Italian satellite (San Marco) in 1964. ASI has also been collaborating with other international space agencies including ESA, NASA, JAXA, etc.</p>
+                    </div>
+                    <div class="right-image">
+                      <a href="https://en.wikipedia.org/wiki/Italian_Space_Agency" ><img src="asi.jpg" alt="Circular Image" class="circular-image"></a>
+                    </div>
+                  </div>
+  <footer class="footer">
+    <p align="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+</footer>
+  <script>
+              function performSearch() {
+            // Get the value from the input field
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            // Check the search term and redirect accordingly
+            switch (searchTerm) {
+                case 'about':
+                    window.location.href = 'about.html';
+                    break;
+                case 'universe':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                    break;
+                case 'solar system':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Solar_System';
+                    break;
+                case 'sun':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                    break;
+                case 'kuiper belt':pluto
+                    window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                    break;
+                case 'mercury':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                    break;
+                case 'venus':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                    break;
+                case 'earth':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                    break;
+                case 'mars':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                    break;
+                case 'jupiter':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                    break;
+                case 'saturn':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                    break;
+                case 'uranus':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                    break;
+                case 'neptune':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                    break;
+                    case 'pluto':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                    break;
+                case 'dwarf planet':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                    break;
+                case 'asteroid':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                    break;
+                case 'comet':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                    break;
+                case 'meteoroid':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                    break;
+                case 'natural satellite':
+                    window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                    break;
+                default:
+                    alert('No specific action for the search term: ' + searchTerm);
+            }
+        }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>contact</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background: url('space.jpg');
+      }
+
+      header {
+        background-color: black;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      .logo {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 80%;
+        overflow: hidden;
+      }
+
+      .animated-image {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .animated-image:hover {
+        transform: scale(1.1);
+      }
+
+      .logo-image {
+        width: 100%;
+        height: 100%;
+        background-image: url('abc (2).jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      header nav li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      header nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .header-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .search-bar {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 90px;
+      }
+
+      .search-bar input {
+        border: none;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .search-bar button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        animation: glow 1s infinite;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 5px #333;
+        }
+        50% {
+          box-shadow: 0 0 20px orangered, 0 0 30px pink;
+        }
+        100% {
+          box-shadow: 0 0 5px #333;
+        }
+      }
+
+      .home a {
+        margin-right: 40px;
+        text-decoration: none;
+        color: whitesmoke;
+        transition: color 0.3s ease;
+      }
+
+      .home a:hover {
+        color: brown;
+        animation: bounce 0.5s ease;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .footer {
+        background-color: rgb(7, 13, 49);
+        color: white;
+        text-align: left;
+        padding: 10px;
+        font-size: 18px;
+        width: 100%;
+      }
+
+      h2 {
+        color: yellow;
+        font-size: 45px;
+        text-align: center;
+      }
+
+      .contact-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-info section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form-section {
+        flex: 1;
+        margin-left: 400px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form {
+        display: flex;
+      }
+
+      .right {
+        margin-left: 200px;
+      }
+
+      .contact-form {
+        margin-bottom: 20px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: transparent;
+        color: rgb(72, 248, 36);
+      }
+
+      .contact-form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .contact-form input[type="submit"]:hover {
+        background-color: brown;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-image"></div>
+    </div>
+    <nav>
+      <div class="header-icons">
+        <div class="search-bar">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search">
+          <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+        </div>
+        <div class="home">
+          <a href="index.html">Home</a>
+          <a href="about us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="technology.html">Technology</a>
+          <a href="photos.html">Photos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <h2 style="color:yellow;font-size: 45px;"align="center">Human In Space</h2>
+    <div class="contact-section">
+      <!-- Left side: Contact Information -->
+      <div class="contact-info">
+        <section>
+          <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+          <h2>Address</h2>
+          <p>Kishori, Jani,<br> Meerut,<br> Uttar Pradesh</p>
+        </section>
+    
+        <section>
+          <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+          <h2>Phone</h2>
+          <p>123-456-78901548</p>
+        </section>
+    
+        <section>
+          <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+          <h2>E-mail</h2>
+          <p>BhartiyaKrishi@gmail.com</p>
+        </section>
+      </div>
+    
+      <!-- Right side: Contact Form -->
+      <div class="contact-form-section">
+        <form>
+          <div class="form">
+            <div class="right">
+              <div class="contact-form">
+                <span>Full Name</span>
+                <input type="text" required>
+              </div>
+    
+              <div class="contact-form">
+              <span>Email Id</span>
+                <input type="email" required>
+              </div>
+    
+              <div class="contact-form">
+                <span>Type your Message....</span>
+                <textarea name="text"></textarea>
+              </div>
+    
+              <div class="contact-form">
+                <input type="submit" name="submit">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+       
+
+    <footer class="footer">
+      <p align="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+    </footer>
+    <script>
+             function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+
+    </script>
+  </body>
+</html>
