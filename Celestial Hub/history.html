@@ -1,0 +1,1142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      overflow-x: hidden;
+      background: url('space.jpg');
+    }
+
+    header {
+      background-color: black;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden;
+    }
+
+    .animated-image {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .animated-image:hover {
+      transform: scale(1.1);
+    }
+
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc (2).jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Styles for the header-icons section */
+    .header-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+
+    /* Style the search bar */
+    .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+
+    .home a {
+      margin-right: 40px;
+      text-decoration: none;
+      color: whitesmoke;
+      transition: color 0.3s ease;
+    }
+
+    .home a:hover {
+      color: brown;
+      animation: bounce 0.5s ease;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .footer {
+      background-color: rgb(7, 13, 49);
+      color: white;
+      text-align: left;
+      padding: 10px;
+      font-size: 18px;
+      width: 100%;
+    }
+img {
+	max-width: 100%;
+}
+
+.Container {
+	width: 1160px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.Main {
+	padding: 30px 0;
+}
+.TopTitle {
+	padding: 0 0 30px;
+	text-align: center;
+}
+.FirstTitle {
+	font-size: 40px;
+	color: #fff;
+}
+.secTitle {
+	color: #ffeb3b;
+	font-size: 60px
+}
+
+.ag-timeline_item {
+	margin: 0 0 50px;
+	position: relative;
+}
+.ag-timeline_item:nth-child(2n) {
+	text-align: right;
+}
+
+.ag-timeline {
+	display: inline-block;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.ag-timeline_line {
+	width: 8px;
+	background-color: #393935;
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	bottom: 0;
+	overflow: hidden;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.ag-timeline_line-progress {
+	width: 100%;
+	height: 20%;
+	background-color: brown;
+}
+
+.ag-timeline-card_box {
+	padding: 0 0 20px 50%;
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+	padding: 0 50% 20px 0;
+}
+
+.ag-timeline-card_point-box {
+	display: inline-block;
+	margin: 0 14px 0 -28px;
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+	margin: 0 -28px 0 14px;
+}
+
+.ag-timeline-card_point {
+	height: 50px;
+	line-height: 50px;
+	width: 50px;
+	border: 3px solid brown;
+	background-color: #1d1d1b;
+	text-align: center;
+	font-family: 'ESL Legend', sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.js-ag-active .ag-timeline-card_point {
+	color: #1d1d1b;
+	background-color: brown;
+}
+
+.ag-timeline-card_meta-box {
+	display: inline-block;
+}
+
+.ag-timeline-card_meta {
+	margin: 10px 0 0;
+	font-family: 'ESL Legend', sans-serif;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgb(127, 248, 28);
+}
+
+.ag-timeline-card_item {
+	display: inline-block;
+	width: 45%;
+	margin: -77px 0 0;
+	background-color:green;
+	opacity: 0;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+	-o-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+	box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+	-webkit-transition: -webkit-transform .5s, opacity .5s;
+	-moz-transition: -moz-transform .5s, opacity .5s;
+	-o-transition: -o-transform .5s, opacity .5s;
+	transition: transform .5s, opacity .5s;
+	position: relative;
+}
+
+.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+}
+
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	-o-transform: translateX(200%);
+	transform: translateX(200%);
+}
+
+.js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+.js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.ag-timeline-card_arrow {
+	height: 18px;
+	width: 18px;
+	margin-top: 20px;
+	background-color: green;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+	margin-left: calc(-18px / 2);
+	margin-right: calc(-18px / 2);
+}
+.ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
+  margin-left: -10px;
+  right: auto;
+  left: 0;
+}
+
+.ag-timeline-card_img {
+	width: 100%;
+  height: 500px;
+	border: 1px solid green;
+}
+
+/*--- Responsive Code ---*/
+@media only screen and (max-width: 979px) {
+  .ag-timeline_line {
+	left: 30px;
+  }
+
+  .ag-timeline_item:nth-child(2n) {
+	text-align: left;
+  }
+
+  .ag-timeline-card_box,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+	padding: 0 0 20px;
+  }
+  
+  .ag-timeline-card_meta-box {
+    display: none;
+  }
+  
+  .ag-timeline-card_point-box,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+    margin: 0 0 0 8px;
+  }
+  
+  .ag-timeline-card_point {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+  }
+  
+  .ag-timeline-card_item {
+    width: auto;
+    margin: -65px 0 0 75px
+  }
+  
+  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+  .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -o-transform: translateX(200%);
+    transform: translateX(200%);
+  }
+  
+  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+    right: auto;
+    left: 0;
+  }
+  
+  .ag-timeline-card_arrow {
+    margin-top: 12px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Container {
+    width: 96%;
+  }
+
+  .ag-timeline-card_img {
+    height: auto;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .secTitle {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .Container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .Container {
+    width: 960px;
+  }
+}
+/*--- Responsive Code End ---*/
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <div class="logo-image"></div>
+    </div>
+    <nav>
+      
+        <div class="header-icons">
+          <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search">
+            <button class="search-button" id="searchButton" onclick="performSearch()">Search</button>
+        </div>
+            <div class="home">
+                <a href="index.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="technology.html">Technology</a>
+                <a href="photos.html">Photos</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<br><br><br><br>
+<h2 style="color:yellow;font-size: 45px;"align="center">History</h2>
+  <p  style="color: white; font-size: 25px;" align="center">
+    <b>Space history refers to the chronological record of human activities and endeavors related to<br> the exploration and understanding of outer space. It encompasses a wide range of events, achievements, and milestones in the field of astronomy, astrophysics, and space exploration. Space history begins with early observations of celestial bodies and the development of scientific theories about the cosmos.</b></p>
+<div class="Main">
+  <section class="Main-section">
+    <div class="Container">
+      <div class="js-timeline ag-timeline">
+        <div class="js-timeline_line ag-timeline_line">
+          <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+        </div>
+		
+        <div class="ag-timeline_list">
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">01</div>
+              </div>
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 1940’s</div>
+              </div>
+            </div>
+			
+			      <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h1.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		       <!-- Right Deathstroke Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 1950’s</div>
+              </div>
+			  
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">02</div>
+              </div>
+            </div>
+			
+		        <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h2.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Iron Man Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">03</div>
+              </div>
+
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 1950’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h3.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Right Green Lantern Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Early 1960’s</div>
+              </div>
+			  
+              <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">04</div>
+              </div>
+            </div>
+			
+            <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h4.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Nightwing Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">05</div>
+              </div>
+			  
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 1960’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h5.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+
+
+
+
+          
+		       <!-- Right Deathstroke Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The late 1960’s</div>
+              </div>
+			  
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">06</div>
+              </div>
+            </div>
+			
+		        <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h6.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Iron Man Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">07</div>
+              </div>
+
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 1970’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h7.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Right Green Lantern Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 1970’s</div>
+              </div>
+			  
+              <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">08</div>
+              </div>
+            </div>
+			
+            <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h8.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Nightwing Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">09</div>
+              </div>
+			  
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 1980’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h9.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Right Deathstroke Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 1980’s</div>
+              </div>
+			  
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">10</div>
+              </div>
+            </div>
+			
+		        <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h10.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Iron Man Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">11</div>
+              </div>
+
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 1990’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h11.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Right Green Lantern Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 1990’s</div>
+              </div>
+			  
+              <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">12</div>
+              </div>
+            </div>
+			
+            <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h12.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Nightwing Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">13</div>
+              </div>
+			  
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 2000’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h13.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Right Deathstroke Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 2000’s</div>
+              </div>
+			  
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">14</div>
+              </div>
+            </div>
+			
+		        <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h14.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Iron Man Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">15</div>
+              </div>
+
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Early 2010’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h15.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Right Green Lantern Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The Mid 2010’s</div>
+              </div>
+			  
+              <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">16</div>
+              </div>
+            </div>
+			
+            <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h16.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Nightwing Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">17</div>
+              </div>
+			  
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The late 2010’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h17.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- Right Deathstroke Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+              <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 2020’s</div>
+              </div>
+			  
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">18</div>
+              </div>
+            </div>
+			
+		        <!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h18.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+		      <!-- Left Iron Man Box -->
+          <div class="js-timeline_item ag-timeline_item">
+            <div class="ag-timeline-card_box">
+			        <!-- Number Code-->
+              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                <div class="ag-timeline-card_point">19</div>
+              </div>
+
+			        <!-- Name Code-->
+              <div class="ag-timeline-card_meta-box">
+                <div class="ag-timeline-card_meta">Space Exploration In The 2020’s</div>
+              </div>
+            </div>
+			
+		      	<!-- Image Code-->
+            <div class="ag-timeline-card_item">
+              <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  <img src="h19.png" class="ag-timeline-card_img" />
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+			
+		    
+
+
+
+
+
+          
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+ 
+<footer class="footer">
+  <p align ="center">&copy; 2023 CELESTIAL HUB . All rights reserved.</p>
+</footer>
+<script>
+   function performSearch() {
+          // Get the value from the input field
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+          // Check the search term and redirect accordingly
+          switch (searchTerm) {
+              case 'universe':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Universe';
+                  break;
+              case 'sun':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Sun';
+                  break;
+              case 'kuiper belt':pluto
+                  window.location.href = 'https://en.wikipedia.org/wiki/Kuiper_belt';
+                  break;
+              case 'mercury':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mercury_(planet)';
+                  break;
+              case 'venus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Venus';
+                  break;
+              case 'earth':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Earth';
+                  break;
+              case 'mars':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Mars';
+                  break;
+              case 'jupiter':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Jupiter';
+                  break;
+              case 'saturn':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Saturn';
+                  break;
+              case 'uranus':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Uranus';
+                  break;
+              case 'neptune':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Neptune';
+                  break;
+                  case 'pluto':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Pluto';
+                  break;
+              case 'dwarf planet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Dwarf_planet';
+                  break;
+              case 'asteroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Asteroid';
+                  break;
+              case 'comet':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Comet';
+                  break;
+              case 'meteoroid':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Meteoroid';
+                  break;
+              case 'natural satellite':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Natural_satellite';
+                  break;
+                  case 'galaxy':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Galaxy';
+                  break;
+              case 'big bang':
+                  window.location.href = 'https://en.wikipedia.org/wiki/Big_Bang';
+                  break;
+                  case 'home':
+                  window.location.href = 'index.html';
+                  break;
+              case 'about us':
+                  window.location.href = 'about us.html';
+                  break;
+              case 'contact':
+                  window.location.href = 'contact.html';
+                  break;
+              case 'photos':
+                  window.location.href = 'photos.html';
+                  break;
+              case 'technology':
+                  window.location.href = 'technology.html';
+                  break;
+              case 'solar system':
+                  window.location.href = 'solar.html';
+                  break;
+                  case 'news':
+                  window.location.href = 'news.html';
+                  break;
+              case 'space agency':
+                  window.location.href = 'agency.html';
+                  break;
+              case 'human in space':
+                  window.location.href = 'human.html';
+                  break;
+              case 'history':
+                  window.location.href = 'history.html';
+                  break;
+              case 'records':
+                  window.location.href = 'records.html';
+                  break;
+              case 'mission':
+                  window.location.href = 'mission.html';
+                  break;
+              default:
+                  alert('No specific action for the search term: ' + searchTerm);
+          }
+      }
+            (function ($) {
+  $(function () {
+
+    $(window).on('scroll', function () {
+      fnOnScroll();
+    });
+
+    $(window).on('resize', function () {
+      fnOnResize();
+    });
+
+    var agTimeline = $('.js-timeline'),
+      agTimelineLine = $('.js-timeline_line'),
+      agTimelineLineProgress = $('.js-timeline_line-progress'),
+      agTimelinePoint = $('.js-timeline-card_point-box'),
+      agTimelineItem = $('.js-timeline_item'),
+      agOuterHeight = $(window).outerHeight(),
+      agHeight = $(window).height(),
+      f = -1,
+      agFlag = false;
+
+    function fnOnScroll() {
+      agPosY = $(window).scrollTop();
+
+      fnUpdateFrame();
+    }
+
+    function fnOnResize() {
+      agPosY = $(window).scrollTop();
+      agHeight = $(window).height();
+
+      fnUpdateFrame();
+    }
+
+    function fnUpdateWindow() {
+      agFlag = false;
+
+      agTimelineLine.css({
+        top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
+        bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
+      });
+
+      f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
+    }
+
+    function fnUpdateProgress() {
+      var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
+
+      i = agTop + agPosY - $(window).scrollTop();
+      a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
+      n = agPosY - a + agOuterHeight / 2;
+      i <= agPosY + agOuterHeight / 2 && (n = i - a);
+      agTimelineLineProgress.css({height: n + "px"});
+
+      agTimelineItem.each(function () {
+        var agTop = $(this).find(agTimelinePoint).offset().top;
+
+        (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
+      })
+    }
+
+    function fnUpdateFrame() {
+      agFlag || requestAnimationFrame(fnUpdateWindow);
+      agFlag = true;
+    }
+
+  });
+})(jQuery);
+</script>
+</body>
+</html>
