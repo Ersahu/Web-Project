@@ -1,0 +1,488 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+body {
+  font-family: Arial;
+  margin: 0;
+ 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+    vertical-align: right;
+      width: 1180px;
+      height: 500px;/* Auto-adjust the height to maintain aspect ratio */
+    }
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+  /* Apply styles to the header */
+    header {
+      background-color: black;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative; /* Add this line to make it a reference for the logo */
+    }
+
+    /* Style the header's heading */
+    header h1 {
+      margin: 0;
+    }
+
+    /* Style the logo container */
+    .logo {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      width: 90px;
+      height: 90px;
+      border-radius: 80%;
+      overflow: hidden; /* Add this line to hide the overflow */
+    }
+    .animated-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+}
+
+    /* Style the logo image */
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc.webp'); /* Replace with your new logo image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Style the navigation menu */
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Styles for the header-icons section */
+    .header-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+
+    /* Style the search bar */
+    .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 90px;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    .search-button:hover {
+      animation: glow 1s infinite;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #333;
+      }
+      50% {
+        box-shadow: 0 0 20px orangered, 0 0 30px pink;
+      }
+      100% {
+        box-shadow: 0 0 5px #333;
+      }
+    }
+    .home a {
+    margin-right: 40px; /* Adjust the value as needed */
+  text-decoration: none;
+  color: whitesmoke; /* Default link color */
+  transition: color 0.3s ease; /* Add a color transition on hover */
+}
+
+.home a:hover {
+  color: brown; /* Change link color on hover */
+  animation: bounce 0.5s ease; /* Add a bounce animation on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+    /* Style the login and cart icons */
+    .login-icon a,
+    .cart-icon a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .login-icon a img,
+    .cart-icon a img {
+      width: 50px; /* Set the desired width */
+      height: 50px;
+    }
+    *{
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 600px;
+  padding: 0 5px;
+  position: relative;
+  left: 50px;
+  display: grid;
+    grid-template-columns: auto auto; /* Defines a two-column grid */
+    gap: 50px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 16px;
+  text-align: left;
+  background-color: transparent;
+  color: black;
+}
+.custom-button {
+  position: relative;
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px; /* Adjust the height of the moving line */
+  background-color: red; /* Color of the moving line */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.custom-button:hover::before {
+  width: 100%; /* Make the line full width on hover */
+  transition: width 0.3s ease;
+}
+
+.custom-button a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+    .footer {
+    background-color:#deb887;
+    color:black;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+.site-title {
+  text-align: left;
+  margin-left: 100px; /* Adjust the margin as needed to control the space between the logo and the heading */
+  font-size: 28px; /* You can adjust the font size as needed */
+  color: darkgreen;
+  font-weight: bo1ld;
+}
+.slide-overlay {
+  position: absolute;
+  top: 10%; /* Adjust as needed to vertically center the text */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+  color: white; /* Text color */
+  font-size: 50px; /* Text size */
+  background: transparent;/* Background color with opacity */
+  padding : 10px 20px; /* Padding for the text */
+}
+
+.mySlides {
+  position: relative; /* Make sure the overlay is relative to the mySlides container */
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <div class="logo-image"></div>
+    </div>
+    <nav>
+      
+        <div class="header-icons">
+            <div class="search-bar">
+              <input type="text" class="search-input" id="searchInput" placeholder="Search">
+                <button class="search-button" id="searchButton">Search</button>
+            </div>
+            <div class="home">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+            
+                <a href="product.html">Product</a>
+                <a href="contact.html">Contact</a>
+                <a href="technology.html">Technology</a>
+                <a href="photos.html">Photos</a>
+            </div>
+            <div class="login-icon">
+                <a href="sign.html"><img src="v.jpg"  class="animated-image" alt="Login"></a>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html"><img src="v1.png" class="animated-image" alt="Cart"></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <div class="container"> <div class="mySlides">
+      <img src="a.jpg" style="width:100%">
+      <div class="slide-overlay" style="color:black;"><b>BHARTIYA KRISHI</b></div>
+    </div>
+  
+    <div class="mySlides">
+      <img src="b.jpg" style="width:100%">
+      <div class="slide-overlay" style="color:black;"><b>BHARTIYA KRISHI</b></div>
+    </div>
+  
+    <div class="mySlides">
+      <img src="c.jpg" style="width:100%" >
+      <div class="slide-overlay" style="color:black;"><b>BHARTIYA KRISHI</b></div>
+    </div>
+      
+    <div class="mySlides">
+      <img src="d.jpg" style="width:100%">
+      <div class="slide-overlay" style="color:black;"><b>BHARTIYA KRISHI</b></div>
+    </div>
+  
+    <div class="mySlides">
+      <img src="e.jpg" style="width:100%">
+      <div class="slide-overlay" style="color:black;"><b>BHARTIYA KRISHI</b></div>
+    </div>
+      
+    <div class="mySlides">      
+      <img src="f.jpg" style="width:100%">
+      <div class="slide-overlay" style="color:black;"><b>BHARTIYA KRISHI</b></div>
+    </div>
+    </div>
+               <div>
+          <div class="row">
+          <div class="column">
+            <div class="card">
+              <h2 style="color:brown;font-size: 37px;"align="left"> Discover Our Insights </h2>
+<p style="color: black; font-size: 25px; text-align: center;"><b>Our website offers a wide range of insights related to agriculture and farming. 
+  From tips on growing your own produce to the latest advancements in farming technology, we've got you covered.
+  Our experienced team of agriculture specialists and consultants are dedicated to providing you with accurate and up-to-date information.</b>
+</p>
+<button class="custom-button" style="background-color: orange; color: white; text-align: center;">
+  <a href="Insights.html" style="display: inline-block;">Read More</a>
+</button>
+
+  </div>
+          </div>
+          <div>
+            <div class="row">
+            <div class="column">
+              <div class="card">
+                <h2 style="color:brown;font-size: 37px;"align="left"> Latest News </h2>
+                <img src="h.jpg" class="animated-image" style="width:500px;height:200px;">
+               <p style="color: black; font-size: 25px;"><b>New Farming Technique</b></p>
+               <button class="custom-button" style="background-color: orange; color: white; text-align: center;">
+                <a href="https://www.plugandplaytechcenter.com/resources/new-agriculture-technology-modern-farming/" style="display: inline-block;">Read More</a>
+              </button>
+              </div>
+            </div>
+            </div>
+          </div>
+           <div>
+            <div class="column">
+            <div class="card">
+              <h2 style="color:brown;font-size: 37px;"align="left"> About Us </h2> 
+   <p style="color: black; font-size: 25px; text-align: center;"><b>Bhartiya Krishi is a team of passionate agriculture specialists and consultants who are
+     dedicated to promoting sustainable farming practices. 
+    Our goal is to provide farmers with the tools and knowledge they need to maximize their yield while minimizing their impact on the environment.</b></p>
+    <button class="custom-button" style="background-color: orange; color: white; text-align: center;">
+      <a href="about.html" style="display: inline-block;">Read More</a>
+    </button>
+  </div>
+          </div>
+           </div>
+           <div>
+            <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="g.jpg" class="animated-image" style="width:500px;height:200px;">
+               <p style="color: black; font-size: 25px;"><b>The Future of Farming</b></p>
+              <button class="custom-button" style="background-color: orange; color: white; text-align: center;">
+                <a href="https://en.wikiversity.org/wiki/Vertical_farming" style="display: inline-block;">Read More</a>
+              </button>
+                </div>
+            </div>
+            </div>
+           </div>
+           <footer class="footer">
+            <p align="center">&copy; 2023 Bhartiya Krishi. All rights reserved.</p>
+        </footer>
+        <script>
+          var slideIndex = 0;
+        
+          showSlides();
+        
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+        
+            slideIndex++;
+            if (slideIndex > slides.length) {
+              slideIndex = 1;
+            }
+        
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds (adjust as needed)
+          }
+        
+          function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex > slides.length) {
+              slideIndex = 1;
+            } else if (slideIndex < 1) {
+              slideIndex = slides.length;
+            }
+            showSlides();
+          }
+          const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    searchButton.addEventListener("click", function () {
+      searchInput.value = ""; // Clear the input field
+    });
+        </script>
+        </body>
+</html>

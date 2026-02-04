@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@WebSpace4u</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+      body{
+        background-color: white;
+      }
+            header {
+      background-color: black;
+      color: #fff;
+      padding: 18px;
+      text-align: center;
+      position: relative;
+      width: 1349px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80%;
+      overflow: hidden;
+    }
+
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('abc.webp');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+   /* Increase the font size */
+}
+
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 90px;
+}
+
+.search-bar input {
+  border: none;
+  padding: 14px; /* Increase the padding */
+  width: 200px;
+  
+}
+
+.search-bar button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 14px 20px; /* Increase the padding */
+  cursor: pointer;
+}
+
+    .home a {
+      margin-right: 40px;
+    }
+
+    .login-icon a,
+    .cart-icon a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .login-icon a img,
+    .cart-icon a img {
+      width: 50px;
+      height: 50px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer {
+      background-color: #deb887;
+      color: black;
+      text-align: left;
+      padding: 38px;
+      font-size: 18px;
+      width: 100%;
+    }
+
+    .site-title {
+      text-align: left;
+      margin-left: 90px;
+      font-size: 28px;
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    #split-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #left-panel, #right-panel {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      text-align: center;
+    }
+
+    #left-panel img {
+      width: 60px;
+      height: 60px;
+    }
+
+    #left-panel h2 {
+      color: brown;
+      font-size: 25px;
+      margin: 10px 0;
+    }
+    .movie-card{
+    height: 300px;
+    width: 500px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <div class="logo-image"></div>
+        </div>
+        <h1 class="site-title">Bhartiya Krishi</h1>
+        <nav>
+          <div class="header-icons">
+            <div class="search-bar">
+              <input type="text" placeholder="Search">
+              <button>Search</button>
+            </div>
+            <div class="home">
+              <a href="index.html">Home</a>
+              <a href="about.html">About us</a>
+              
+              <a href="product.html">Product</a>
+              <a href="contact.html">Contact</a>
+              <a href="technology.html">Technology</a>
+              <a href="photos.html">Photos</a>
+            </div>
+            <div class="login-icon">
+              <a href="sign.html"><img src="v.jpg" alt="Login"></a>
+            </div>
+            <div class="cart-icon">
+              <a href="cart.html"><img src="v1.png" alt="Cart"></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div>
+        <h2 style="color: brown; font-size: 37px;" align="center">Our Insights</h2>
+        <p style="color: black; font-size: 25px; text-align: center;">
+          <b>
+            Welcome to Bhartiya Krishi! Here you will find informative articles and resources on the latest
+             agriculture equipment, techniques, and practices. Our team of agriculture specialists provides
+              expert consultation on common problems and challenges in the field. Our website covers a wide 
+              range of topics, including fertilizers, logistics, equipment, and pesticides. Stay up to date 
+              with the latest trends and innovations in agriculture by following our website.
+          </b>
+        </p>
+        <br>
+      </div>
+      <main>
+        <div id="split-container">
+            <article class="movie-card">
+                <img src="blog.jpg" alt="Avatar wallpaper" />
+              
+                <div class="content">
+                    <h1 >Agriculture Equipment</h1>
+              
+                  <div class="infos">
+                  <p class="synopsis"><b>
+                    Our website provides valuable insights on the latest agriculture equipment and technologies. From tractors to drones, we cover it all. Learn about the benefits of using advanced equipment in your farm and how it can improve your productivity and yield.</b></p>
+                  </div>
+                </div>
+              </article>
+          <div id="left-panel">
+          </div>
+            <article class="movie-card">
+                <img src="blog1.jpg" alt="Avatar wallpaper" />
+              
+                <div class="content">
+                    <h1 >Common Problems in Agriculture</h1>
+              
+                  <div class="infos">
+                    <p class="synopsis"><b>
+                        The agriculture industry faces many challenges and problems. Our website covers a wide range of common issues, including soil degradation, water scarcity, and pests. Learn about the latest research and solutions to these problems and how they can affect your farm.</b></p>              
+                  </div>
+                </div>
+              </article>
+          <div id="right-panel">
+            
+          </div>
+        </div>
+      </main><br><br>
+      <main>
+        <div id="split-container">
+            <article class="movie-card">
+                <img src="blog3.jpg" alt="Avatar wallpaper" />
+              
+                <div class="content">
+                    <h1 >Consultation by Agriculture  Specialists</h1>
+              
+                  <div class="infos">
+                  <p class="synopsis"><b>Our team of agriculture specialists offers expert consultation on common problems and challenges faced by farmers. We provide customized solutions based on your specific needs and requirements. Whether you need help with crop management or pest control, our consultants are here to help</b></p>
+              
+                  </div>
+                </div>
+              </article>
+          <div id="left-panel">
+          </div>
+            <article class="movie-card">
+                <img src="blog4.jpg" alt="Avatar wallpaper" />
+              
+                <div class="content">
+                    <h1 >Sustainable Agriculture  Practices</h1>
+              
+                  <div class="infos">
+                    <p class="synopsis"><b>Sustainability is becoming increasingly important in agriculture. Our website provides resources and information on sustainable agriculture practices, including crop rotation, organic farming, and conservation methods. Learn about the benefits of sustainable agriculture for your farm and the environment.</b></p>
+              
+                  </div>
+                </div>
+              </article>
+          <div id="right-panel">
+            
+          </div>
+        </div>
+      </main><br>
+      <div class="footer">
+        <p align="center">&copy; 2023 Bhartiya Krishi. All rights reserved.</p>
+      </div>
+</body>
+</html>
