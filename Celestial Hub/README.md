@@ -25,6 +25,10 @@ Celestial Hub is an educational and entertaining web platform designed for space
 - **Technology**: Space technology and innovations
 - **Photos**: Extensive space imagery gallery
 
+## 📸 Preview
+<img width="1919" height="1124" alt="Screenshot 2026-02-04 072836" src="https://github.com/user-attachments/assets/5337751c-bea5-4ba8-9da3-a2907e577cf5" />
+
+
 ## 📁 Project Structure
 
 ```
@@ -203,5 +207,6 @@ This project is proprietary and owned by Celestial Hub organization.
 - Space science community
 
 ---
+
 
 **© 2023 CELESTIAL HUB. All rights reserved.**
